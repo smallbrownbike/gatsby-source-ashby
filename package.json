@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-plugin",
+  "name": "gatsby-source-ashby",
   "version": "1.0.0",
-  "description": "A minimal boilerplate for the essential files Gatsby looks for in a plugin",
+  "description": "Sources all published job postings from Ashby",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,9 @@
     "gatsby",
     "gatsby-plugin"
   ],
-  "author": "Kyle Gill <kyle.robert.gill@gmail.com>",
-  "license": "0BSD"
+  "author": "Eli Kinsey <eli@ekinsey.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
 }
