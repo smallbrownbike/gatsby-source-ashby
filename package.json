@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-ashby",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sources all published job postings from Ashby",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smallbrownbike/gatsby-source-ashby"
   }
 }
