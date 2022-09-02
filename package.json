@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-ashby",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sources all published job postings from Ashby",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,8 @@
   },
   "keywords": [
     "gatsby",
-    "gatsby-plugin"
+    "gatsby-plugin",
+    "gatsby-source-plugin"
   ],
   "author": "Eli Kinsey <eli@ekinsey.dev>",
   "license": "MIT",
