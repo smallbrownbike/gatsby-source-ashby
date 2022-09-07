@@ -68,7 +68,7 @@ allAshbyJobPosting {
 
 Ashby allows you to attach custom fields to each job. Custom fields are handy for displaying information that Ashby doesn't already have a field for.
 
-Each `AshbyJobPosting` node has an `AshbyJob` parent node from which you can access the job's custom fields. Custom fields with selectable values automatically return the human-friendly label of the custom field. Neat!
+Each `AshbyJobPosting` node has an `AshbyJob` parent node from which you can access the job's custom fields. Custom fields with selectable values automatically return the human-readable label of the custom field. Neat!
 
 ```
 allAshbyJobPosting {
