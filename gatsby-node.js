@@ -107,6 +107,14 @@ exports.createSchemaCustomization = ({ actions }) => {
           type: "AshbyCustomField",
           id: source.id,
         });
+        if (Array.isArray(source.value)) {
+          const value = source.value.map(
+            (sourceValue) =>
+              data?.selectableValues?.find(({ value }) => value === sourceValue)
+                ?.label || sourceValue
+          );
+          return JSON.stringify(value);
+        }
         const value =
           data?.selectableValues?.find(({ value }) => {
             return value === source.value;
