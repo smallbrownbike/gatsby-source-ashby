@@ -4,7 +4,7 @@ exports.sourceNodes = async (
   { createContentDigest, actions: { createNode } },
   options
 ) => {
-  const { apiKey, listedOnly = true } = options;
+  const { apiKey, listedOnly = true, jobStatus = ["Open"] } = options;
   if (!apiKey)
     return console.error("gatsby-source-ashby: Missing options.apiKey");
 
@@ -43,8 +43,8 @@ exports.sourceNodes = async (
     return request("https://api.ashbyhq.com/customField.list");
   }
 
-  async function getJobs() {
-    return request("https://api.ashbyhq.com/job.list");
+  async function getJobs({ jobStatus }) {
+    return request("https://api.ashbyhq.com/job.list", { status: jobStatus });
   }
 
   const customFields = await getCustomFields();
@@ -62,7 +62,7 @@ exports.sourceNodes = async (
     createNode(node);
   });
 
-  const jobs = await getJobs();
+  const jobs = await getJobs({ jobStatus });
   for (const job of jobs) {
     const node = {
       ...job,
